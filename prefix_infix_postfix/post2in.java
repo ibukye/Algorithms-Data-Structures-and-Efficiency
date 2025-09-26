@@ -35,7 +35,6 @@ public class post2in {
                     newEquation.append(b);
                     st.push(newEquation.toString());
                 }
-                
             }
             i++;
         }
