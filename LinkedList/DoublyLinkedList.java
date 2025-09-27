@@ -1,3 +1,6 @@
+import Node;
+
+package LinkedList;
 class Node {
     Node prev;
     Object element;
