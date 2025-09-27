@@ -79,7 +79,6 @@ public class in2post {
         return ans;
     }
     
-    
     public static void main(String[] args) {
         String infix = "A*(B+C)";
         String postfix = infix2postfix(infix);

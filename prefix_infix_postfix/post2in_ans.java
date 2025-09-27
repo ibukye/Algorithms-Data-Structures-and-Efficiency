@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class post2in_ans {
 
-    // 優先順位を返す
+    // Return Priority
     public static int priority(char c) {
         switch (c) {
             case '+': case '-': return 1;
@@ -22,12 +22,12 @@ public class post2in_ans {
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
 
-            // オペランド
+            // Operand
             if (Character.isLetterOrDigit(c)) {
                 expr.push(String.valueOf(c));
-                prio.push(100); // オペランドは最優先
+                prio.push(100); // Most Priority on Operand
             }
-            // 演算子
+            // Operators
             else {
                 String b = expr.pop();
                 String a = expr.pop();
@@ -36,7 +36,7 @@ public class post2in_ans {
 
                 int pc = priority(c);
 
-                // 括弧付けルール
+                // Brackets rule
                 if (pa < pc) a = "(" + a + ")";
                 if (pb <= pc) b = "(" + b + ")";
 
